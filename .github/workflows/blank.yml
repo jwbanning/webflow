@@ -12,6 +12,6 @@ jobs:
           curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
       - name: Login to Postman CLI
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
-      - name: Update spec and sync collection
+      - name: Update specification and then synch the collection
         run: |
           postman collection run "44549813-b3e5335f-e085-41c6-952b-2e333becc226"
